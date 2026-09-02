@@ -31,7 +31,7 @@ Every visible text sits in a pair: `<span lang="de">...</span><span lang="en">..
 
 ## Design tokens
 
-Logo blue `#0071B8`, navy `#062A4D`, sun yellow `#F5C400` (CTA), aqua `#2FD3C6`, ground `#F3F8FC`. Headlines Anton, body Outfit (Google Fonts).
+Club colours only, blue and white: logo blue `#0071B8`, navy `#062A4D`, light blue `#A6D8F7` (accents on dark backgrounds), white (CTA buttons on blue), ground `#F3F8FC`. No yellow, no aqua. Headlines Anton, body Outfit (Google Fonts).
 
 ## Content to confirm
 

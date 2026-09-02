@@ -2,7 +2,7 @@
 
 Ziel: Die neue Seite (siehe Prototyp) innerhalb von ClubDesk umsetzen, damit Mitglieder, Kalender, Formulare und Helferportal weiterhin automatisch synchron bleiben.
 
-Referenz-Look: foothillclubwaterpolo.org, übersetzt auf SMZ Blau (#0071B8) mit Gelb (#F5C400) als Aktionsfarbe.
+Referenz-Look: foothillclubwaterpolo.org, übersetzt auf SMZ Blau (#0071B8) mit Weiss als Aktionsfarbe (Klubfarben Blau und Weiss).
 
 ## 1. Was ClubDesk kann und was nicht
 
@@ -17,7 +17,7 @@ Version auf smzuerich.com: ClubDesk 5.0.15. Die CSS-Datei ist auf dessen DOM-Kla
 1. Im ClubDesk Admin: Webseite > Design. Aktuelle Vorlage notieren (Screenshot).
 2. Vorlage wählen mit fixiertem Menü oben und breitem Header (in ClubDesk "Fixed top navigation" oder ähnlich). Kein Seitenmenü.
 3. Farben setzen:
-   Primär #0071B8, Sekundär #062A4D, Akzent/Buttons #F5C400, Hintergrund #F3F8FC, Text #0B1F33.
+   Primär #0071B8, Sekundär #062A4D, Akzent/Buttons #FFFFFF (Weiss auf Blau), Hintergrund #F3F8FC, Text #0B1F33.
 4. Schriften: Überschriften "Anton", Fliesstext "Outfit". Falls ClubDesk die Schriften nicht in der Liste hat, werden sie über die CSS-Datei per @import geladen.
 5. Datei smz-clubdesk.css öffnen, kompletten Inhalt in das Feld "Eigenes CSS" einfügen. Speichern, Vorschau prüfen.
 6. Logo: Bestehendes Logo (512x512) behalten. Es wird rund mit weissem Hintergrund dargestellt.
@@ -44,7 +44,7 @@ Zuordnung der alten Seiten:
 | Kalender | Kalender |
 | Ethik und Doping | Verein (Block) |
 | Offene Stellen | Verein (Block) |
-| Mitglied werden | Eigene Seite, als gelber Button im Menü |
+| Mitglied werden | Eigene Seite, als weisser Button im Menü |
 
 Die alten URLs (z.B. /jugend/schnuppern) in ClubDesk als Weiterleitungen auf die neuen Seiten setzen, damit Links in Flyern und bei Google weiter funktionieren.
 
@@ -56,7 +56,7 @@ Jeder Block ist ein ClubDesk "Abschnitt" (cd-section). Dunkel = Abschnitt auf "D
    `<div class="announce">Saison 2026/27 läuft. Gratis Schnuppertraining für Kinder ab 6 Jahren, jede Woche. <a href="/jugend">Zum Schnuppern</a></div>`
 
 2. Hero (Header-Abschnitt, dunkel). Zwei Spalten.
-   Links: Text-Block mit `<p class="eyebrow">Wasserballklub Stadtmannschaft Zürich</p>`, dann H1 `Tauch ein.<span class="tag">#SMZfamilie</span>`, ein Absatz Lead-Text, zwei Buttons (gelb "Gratis Schnuppern", ghost "Unsere Teams").
+   Links: Text-Block mit `<p class="eyebrow">Wasserballklub Stadtmannschaft Zürich</p>`, dann H1 `Tauch ein.<span class="tag">#SMZfamilie</span>`, ein Absatz Lead-Text, zwei Buttons (weiss "Gratis Schnuppern", ghost "Unsere Teams").
    Rechts: Bild-Block, Teamfoto SMZ 1.
    Am Ende des Abschnitts ein HTML-Block mit der Welle:
    `<svg class="waves" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="#F3F8FC"/></svg>`
@@ -78,7 +78,7 @@ Jeder Block ist ein ClubDesk "Abschnitt" (cd-section). Dunkel = Abschnitt auf "D
 
 9. Sponsoren (hell, getönt). ClubDesk Sponsoren-Modul. Häusermann als Goldsponsor mit Klasse `logo-tile gold`.
 
-10. Werde Teil der SMZ Familie (Aqua-Verlauf). Zentrierter Text, zwei Buttons: "Mitglied werden" und "Offene Stellen".
+10. Werde Teil der SMZ Familie (Blau-Verlauf). Zentrierter Text, zwei Buttons: "Mitglied werden" und "Offene Stellen".
 
 11. Footer (dunkel). Vier Spalten: Verein + Adresse, Spielen, Verein, Mehr. Darunter Impressum, Datenschutz.
 

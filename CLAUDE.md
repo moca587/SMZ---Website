@@ -8,6 +8,7 @@ Static website for Wasserballklub Stadtmannschaft Zürich (SMZ). No build step, 
 - Every visible string must exist in both languages: `<span lang="de">..</span><span lang="en">..</span>`. Never leave an English-only or German-only string.
 - Never use em dashes or en dashes in copy. Use commas, periods or "bis" / "to".
 - Colors and fonts come from the tokens at the top of `css/style.css`. Do not introduce new hex values in components.
+- The palette is blue and white only (club colours). No yellow, no aqua, no other accent hue. Primary CTA is white on blue, secondary is blue on white. Use `--blue-text` for blue text on surfaces (it lightens in dark mode) and `--blue` for backgrounds.
 - Both themes must stay readable: tokens are redefined under `prefers-color-scheme: dark` and `[data-theme="dark"]`.
 - Images go in `assets/img/`, resized to max 1200px wide, JPEG quality ~60.
 - Keep facts (training times, prices, board members) in sync with `clubdesk/SMZ_ClubDesk_Umsetzungsguide.md` and the live site smzuerich.com.

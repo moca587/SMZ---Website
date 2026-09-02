@@ -16,9 +16,7 @@
   --smz-blue-deep:#004F8A;
   --smz-navy:#062A4D;
   --smz-navy-deep:#031A33;
-  --smz-aqua:#2FD3C6;
-  --smz-aqua-deep:#128C84;
-  --smz-sun:#F5C400;         /* Letzitag yellow, CTA colour */
+  --smz-blue-light:#A6D8F7;  /* accents on dark blue, club colours are blue and white only */
   --smz-ground:#F3F8FC;
   --smz-surface:#FFFFFF;
   --smz-surface-2:#E3EEF7;
@@ -51,8 +49,8 @@ h3,.cd-content h3{ font-size:26px; color:var(--smz-blue); }
 h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
 
 /* eyebrow labels: give a paragraph the class "eyebrow" in the HTML block */
-.eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:var(--smz-aqua-deep); }
-.cd-dark .eyebrow{ color:var(--smz-aqua); }
+.eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:var(--smz-blue); }
+.cd-dark .eyebrow{ color:var(--smz-blue-light); }
 
 /* ---- Navigation bar ----------------------------------------------- */
 .cd-navigation-bar-container, .cd-navigation-bar{
@@ -76,14 +74,14 @@ h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
 }
 .cd-section.cd-dark h1,.cd-section.cd-dark h2,.cd-section.cd-dark h3{ color:#fff; }
 .cd-section.cd-dark p{ color:rgba(255,255,255,.8); }
-.cd-section.cd-dark a{ color:var(--smz-sun); }
+.cd-section.cd-dark a{ color:#fff; }
 
 /* header (hero) section */
 .cd-header .cd-section{
   padding:70px 0 90px; min-height:auto !important;
 }
 .cd-header h1{ font-size:clamp(46px,8vw,96px); }
-.cd-header h1 .tag{ display:block; color:var(--smz-sun); font-size:.55em; letter-spacing:.06em; }
+.cd-header h1 .tag{ display:block; color:var(--smz-blue-light); font-size:.55em; letter-spacing:.06em; }
 
 /* footer */
 .cd-footer .cd-section{
@@ -99,10 +97,12 @@ h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 22px; border-radius:12px; border:0;
   font-family:Outfit,sans-serif; font-weight:800; font-size:16px;
-  background:var(--smz-sun); color:var(--smz-navy-deep) !important;
+  background:var(--smz-blue); color:#fff !important;
   text-decoration:none !important; cursor:pointer;
   transition:transform .15s ease;
 }
+/* on dark sections the primary button flips to white on blue */
+.cd-dark .cd-button, .cd-dark .cd-content .button, .cd-dark .btn, .cd-dark input[type=submit], .cd-dark button.cd-form-submit{ background:#fff; color:var(--smz-navy) !important; }
 .cd-button:hover, .btn:hover, input[type=submit]:hover{ transform:translateY(-2px); }
 .btn-blue{ background:var(--smz-blue); color:#fff !important; }
 .btn-ink{ background:var(--smz-navy-deep); color:#fff !important; }
@@ -120,12 +120,13 @@ h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
 
 /* stat tiles */
 .stat{ padding:22px 24px; border-radius:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); }
-.stat .n{ font-family:Anton,Impact,sans-serif; font-size:56px; line-height:1; color:var(--smz-sun); }
+.stat .n{ font-family:Anton,Impact,sans-serif; font-size:56px; line-height:1; color:#fff; }
 .stat .l{ font-weight:600; color:rgba(255,255,255,.78); font-size:15px; margin-top:6px; }
 
 /* pills / chips */
 .pill{ display:inline-block; padding:4px 10px; border-radius:999px; background:var(--smz-surface-2); color:var(--smz-blue); font-weight:700; font-size:12.5px; letter-spacing:.04em; }
-.pill.sun{ background:var(--smz-sun); color:var(--smz-navy-deep); }
+.pill.white{ background:#fff; color:var(--smz-navy-deep); }
+.pill.blue{ background:var(--smz-blue); color:#fff; }
 
 /* ---- News list ----------------------------------------------------- */
 .cd-news-entry, .cd-news-list .cd-news-item{
@@ -160,10 +161,10 @@ h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
 .cd-sponsor, .logo-tile{
   background:var(--smz-surface); border:1px solid var(--smz-line); border-radius:14px; padding:22px 18px; display:grid; place-items:center; min-height:96px;
 }
-.logo-tile.gold{ border:2px solid var(--smz-sun); }
+.logo-tile.gold{ border:2px solid var(--smz-blue); }
 
 /* ---- Announcement bar (HTML block at very top of the header) ------- */
-.announce{ background:var(--smz-sun); color:var(--smz-navy-deep); font-weight:700; font-size:14px; text-align:center; padding:9px 16px; }
+.announce{ background:var(--smz-blue); color:#fff; font-weight:700; font-size:14px; text-align:center; padding:9px 16px; }
 
 /* ---- Wave divider under the hero (HTML block) ---------------------- */
 .waves{ display:block; width:100%; height:60px; margin-top:-1px; }
@@ -171,7 +172,7 @@ h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
 /* ---- Language toggle (HTML block in the navigation) ---------------- */
 .lang{ display:inline-flex; border:1px solid rgba(255,255,255,.3); border-radius:999px; overflow:hidden; font-size:13px; font-weight:700; }
 .lang a{ padding:6px 11px; color:rgba(255,255,255,.78) !important; text-decoration:none; }
-.lang a.on{ background:var(--smz-sun); color:var(--smz-navy-deep) !important; }
+.lang a.on{ background:#fff; color:var(--smz-navy-deep) !important; }
 
 /* ---- Utilities ----------------------------------------------------- */
 .lead{ font-size:clamp(18px,2vw,21px); }
