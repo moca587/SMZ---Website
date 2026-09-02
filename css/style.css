@@ -152,7 +152,9 @@ body[data-lang="en"] [lang="de"]{display:none!important}
 /* sponsors */
 .sponsors .row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .logo-tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 18px;display:grid;place-items:center;text-align:center;font-weight:700;color:var(--ink-2);min-height:96px;font-size:15px}
-.logo-tile.gold{grid-column:span 2;border:2px solid var(--blue-text);color:var(--ink);font-size:20px}
+.logo-tile.gold{grid-column:span 2;border:2px solid var(--blue-text);color:var(--on-dark);font-size:20px;background:var(--navy)}
+/* the Haeusermann wordmark is white ink on transparency, so its tile needs a dark ground */
+.logo-tile.gold small{color:var(--on-dark-2)}
 .logo-tile small{display:block;font-weight:600;color:var(--ink-3);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
 
 /* join */
@@ -222,6 +224,13 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
 .tt.tt-wide td:last-child{white-space:normal}
 .tt.tt-wide td:first-child{width:42%}
 .steps.path{grid-template-columns:repeat(4,1fr)}
+.logo-tile img{max-height:54px;width:auto;object-fit:contain}
+.logo-tile.gold img{max-height:76px}
+.logo-tile small{margin-top:8px}
+.shots{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+.shots figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.shots img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;box-shadow:var(--shadow)}
+.shots figcaption{color:var(--ink-3);font-size:13.5px;font-weight:600}
 
 /* reveal */
 .rv{animation:rise .7s ease both}
@@ -233,6 +242,8 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
   .stats .grid{grid-template-columns:repeat(2,1fr)}
   .ways,.steps,.grid-3,.people{grid-template-columns:1fr 1fr}
   .steps.path{grid-template-columns:1fr 1fr}
+  .shots{grid-template-columns:1fr 1fr}
+  .shots figure:first-child{grid-column:span 2}
   .news{grid-template-columns:1fr 1fr}.post.feat{grid-column:span 2;grid-row:auto}
   .sponsors .row{grid-template-columns:repeat(2,1fr)}
   footer .cols{grid-template-columns:1fr 1fr}
@@ -245,6 +256,8 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
   .nav .btn-white{display:none}
   .ways,.steps,.grid-2,.grid-3,.people,.news,.form{grid-template-columns:1fr}
   .steps.path{grid-template-columns:1fr}
+  .shots{grid-template-columns:1fr}
+  .shots figure:first-child{grid-column:auto}
   .post.feat{grid-column:auto}
   .stat .n{font-size:44px}
   .ev{grid-template-columns:70px 1fr}
