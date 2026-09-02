@@ -19,9 +19,10 @@ No build step. Open index.html in a browser or push to main to deploy on GitHub 
 - `#/` Home: hero, numbers, three ways in, 3 steps, free trial, Piranha mascot, news, sponsors, join
 - `#/jugend` Youth: Piranha swim school, U10 to U18, Schüeli, FTEM
 - `#/teams` Herren 1, 2, 3 and Damen project
+- `#/wasserball` Teams sub-page: age groups with practice times, age group finder, athlete pathway, licence, costs, FAQ
 - `#/trainings` Practice times per pool
 - `#/kalender` Upcoming events (placeholder data until ClubDesk feed)
-- `#/verein` History, open positions, board, volunteering, shop, ethics
+- `#/verein` History, open positions, board, coaches, volunteering, shop, ethics
 - `#/kontakt` Contact form and sponsoring
 - `#/mitglied` Membership application
 
@@ -38,3 +39,5 @@ Club colours only, blue and white: logo blue `#0071B8`, navy `#062A4D`, light bl
 - Calendar entries are examples
 - Forms show a thank-you message only; wire them to ClubDesk forms or a form service
 - Sponsor tiles are text until logos are added to assets/img/sponsors/
+- Coach cards on `#/verein` still show "Name folgt" for U14, U16 and the women's team
+- `#/wasserball`: U16 and U18 practice times are missing on the source pages ("Trainingszeiten folgen"); club fee amounts are not on the site; the U10 Friday session ends 18:15 on the Jugend page but 18:30 on the Trainings page (Jugend value used)

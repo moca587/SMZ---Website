@@ -209,6 +209,20 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
 .ev b{display:block}
 .ev span{color:var(--ink-2);font-size:14px}
 
+/* accordion: Wasserball page team list + FAQ */
+.accs{display:grid;gap:12px;align-content:start}
+.acc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 20px;box-shadow:var(--shadow)}
+.acc summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0;font-weight:800;font-size:17px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";margin-left:auto;font-family:Anton,Impact,sans-serif;font-size:24px;line-height:1;color:var(--blue-text);transition:transform .2s ease}
+.acc[open] summary::after{transform:rotate(45deg)}
+.acc .body{padding:0 0 18px;display:grid;gap:12px;color:var(--ink-2)}
+.acc .body p{max-width:70ch}
+.who{color:var(--ink-3);font-size:14px;font-weight:600}
+.tt.tt-wide td:last-child{white-space:normal}
+.tt.tt-wide td:first-child{width:42%}
+.steps.path{grid-template-columns:repeat(4,1fr)}
+
 /* reveal */
 .rv{animation:rise .7s ease both}
 @keyframes rise{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -218,6 +232,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
   .hero-copy{padding-bottom:40px}
   .stats .grid{grid-template-columns:repeat(2,1fr)}
   .ways,.steps,.grid-3,.people{grid-template-columns:1fr 1fr}
+  .steps.path{grid-template-columns:1fr 1fr}
   .news{grid-template-columns:1fr 1fr}.post.feat{grid-column:span 2;grid-row:auto}
   .sponsors .row{grid-template-columns:repeat(2,1fr)}
   footer .cols{grid-template-columns:1fr 1fr}
@@ -229,6 +244,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display
   .burger{display:block}
   .nav .btn-white{display:none}
   .ways,.steps,.grid-2,.grid-3,.people,.news,.form{grid-template-columns:1fr}
+  .steps.path{grid-template-columns:1fr}
   .post.feat{grid-column:auto}
   .stat .n{font-size:44px}
   .ev{grid-template-columns:70px 1fr}

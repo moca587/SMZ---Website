@@ -90,11 +90,13 @@ Jugend: 6 Karten (Piranha, U10, Fortgeschrittene/U12, U14, U16, U18/U18 Damen) m
 
 Teams: Grosse Karte SMZ 1 mit Foto und Head Coach, Karten Herren 2/U18 und Herren 3, dunkle Karte Damen-Projekt mit Button.
 
+Teams > Wasserball (Unterseite): Altersgruppen als Akkordeon mit Trainingszeiten und Trainer:in, Altersrechner (Geburtsdatum zu Gruppe), Ausbildungsweg nach FTEM, Lizenz bei Swiss Aquatics, Kosten und FAQ. Verlinkt von der Teams-Seite und im Footer.
+
 Trainings: Eine Karte pro Bad (Oerlikon, Leimbach, Riedtli, Vogtsrain, Grünau, Aubrücke) mit Adresse und Tabelle. Das ist die Seite, die Eltern am häufigsten öffnen. Sie sollte bei jeder Änderung der Hallenbadzeiten zuerst aktualisiert werden.
 
 Kalender: ClubDesk Kalender-Modul. Das CSS stellt Termine als Zeilen mit grossem Datum dar.
 
-Verein: Meilensteine-Tabelle, Offene Stellen (ClubDesk Stellen- oder News-Modul), Vorstand (Personen-Modul oder HTML-Karten), Helfereinsatz, Shop, Ethik.
+Verein: Meilensteine-Tabelle, Offene Stellen (ClubDesk Stellen- oder News-Modul), Vorstand (Personen-Modul oder HTML-Karten), Trainer:innen (gleiche Karten, U10 bis U18, Damen, Herren 1), Helfereinsatz, Shop, Ethik.
 
 Kontakt: ClubDesk Formular links (Vorname, Nachname, E-Mail, Auswahl "Ich möchte", Nachricht), rechts Sekretariat, Social, Sponsor werden.
 
@@ -127,7 +129,7 @@ Tipp: Am Letzitag 2027 einen Fotografen für zwei Stunden buchen. Ein Tag liefer
 
 1. Zahl der Teams und Bäder in "SMZ in Zahlen".
 2. Saisonziel NLA für SMZ 1 auf der Teams-Seite.
-3. Head Coach Namen auf der Teams-Seite.
+3. Head Coach Namen auf der Teams-Seite und die noch fehlenden Trainer:innen-Namen auf der Vereinsseite (U14, U16, Damen).
 4. Aussagen zu Sponsoring-Paketen (Bande, Trikot, Camp). Falls es noch keine Pakete gibt, den Satz auf "Wir stellen gerne ein Paket zusammen" kürzen.
 5. Beispieltermine im Kalender des Prototyps sind Platzhalter, im Live-Betrieb kommen sie aus ClubDesk.
 
