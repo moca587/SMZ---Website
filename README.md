@@ -17,7 +17,7 @@ No build step. Open index.html in a browser or push to main to deploy on GitHub 
 
 ## Pages
 
-- `#/` Home: hero, numbers, three ways in, 3 steps, free trial, Piranha mascot, news, sponsors, join
+- `#/` Home: hero, numbers, three ways in, 3 steps, free trial, Piranha mascot, news, sponsors, faces marquee, join
 - `#/jugend` Youth: Piranha swim school, U10 to U18, Schüeli, FTEM
 - `#/teams` Herren 1, 2, 3 and Damen project
 - `#/wasserball` Teams sub-page: age groups with practice times, age group finder, athlete pathway, licence, costs, FAQ
