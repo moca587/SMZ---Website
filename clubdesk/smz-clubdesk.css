@@ -1,0 +1,190 @@
+/* =====================================================================
+   SMZ Zürich - ClubDesk Custom CSS
+   Wasserballklub Stadtmannschaft Zürich, Redesign 2026
+   Paste into: Webseite > Design > Eigenes CSS (or the "Erweitert / CSS"
+   field of your ClubDesk website design settings).
+   Targets the real ClubDesk 5.x DOM: .cd-navigation-bar, .cd-header,
+   .cd-section, .cd-light, .cd-dark, .cd-footer, .cd-content
+   ===================================================================== */
+
+/* ---- Fonts: Anton for headlines, Outfit for body ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ---- Design tokens ------------------------------------------------- */
+:root{
+  --smz-blue:#0071B8;        /* logo blue */
+  --smz-blue-deep:#004F8A;
+  --smz-navy:#062A4D;
+  --smz-navy-deep:#031A33;
+  --smz-aqua:#2FD3C6;
+  --smz-aqua-deep:#128C84;
+  --smz-sun:#F5C400;         /* Letzitag yellow, CTA colour */
+  --smz-ground:#F3F8FC;
+  --smz-surface:#FFFFFF;
+  --smz-surface-2:#E3EEF7;
+  --smz-ink:#0B1F33;
+  --smz-ink-2:#3F5872;
+  --smz-ink-3:#6E8399;
+  --smz-line:#CFDEEB;
+  --smz-radius:18px;
+  --smz-shadow:0 10px 30px rgba(6,42,77,.10);
+}
+
+/* ---- Base ---------------------------------------------------------- */
+body, .main{
+  font-family:Outfit,system-ui,-apple-system,"Segoe UI",sans-serif !important;
+  font-size:17px; line-height:1.55; color:var(--smz-ink);
+  background:var(--smz-ground) !important;
+  -webkit-font-smoothing:antialiased;
+}
+.cd-content p{ color:var(--smz-ink-2); max-width:70ch; }
+.cd-content a{ color:var(--smz-blue); }
+
+h1,h2,h3,h4,.cd-content h1,.cd-content h2,.cd-content h3{
+  font-family:Anton,Impact,"Arial Narrow",sans-serif !important;
+  font-weight:400 !important; text-transform:uppercase; letter-spacing:.5px;
+  line-height:1.05; margin:0 0 .4em; text-wrap:balance;
+}
+h1,.cd-content h1{ font-size:clamp(40px,6vw,80px); }
+h2,.cd-content h2{ font-size:clamp(30px,4.2vw,52px); color:var(--smz-blue); }
+h3,.cd-content h3{ font-size:26px; color:var(--smz-blue); }
+h4,.cd-content h4{ font-size:20px; color:var(--smz-ink); }
+
+/* eyebrow labels: give a paragraph the class "eyebrow" in the HTML block */
+.eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:.14em; font-size:12.5px; color:var(--smz-aqua-deep); }
+.cd-dark .eyebrow{ color:var(--smz-aqua); }
+
+/* ---- Navigation bar ----------------------------------------------- */
+.cd-navigation-bar-container, .cd-navigation-bar{
+  background:rgba(3,26,51,.94) !important;
+  backdrop-filter:blur(10px);
+  box-shadow:none;
+}
+.cd-navigation-bar a{ color:rgba(255,255,255,.8) !important; font-weight:600; font-size:15px; border-radius:8px; }
+.cd-navigation-bar a:hover, .cd-navigation-bar a.active, .cd-navigation-bar li.active > a{
+  color:#fff !important; background:rgba(255,255,255,.08);
+}
+.cd-navigation-bar .cd-logo img{ border-radius:50%; background:#fff; }
+
+/* ---- Sections ----------------------------------------------------- */
+.cd-section{ padding:88px 0; }
+.cd-section.cd-light{ background:var(--smz-ground); }
+.cd-section.cd-light:nth-of-type(even){ background:linear-gradient(var(--smz-surface-2),var(--smz-ground)); }
+.cd-section.cd-dark{
+  background:radial-gradient(120% 100% at 80% 0%,#1A86CC 0%,var(--smz-blue) 30%,var(--smz-blue-deep) 62%,var(--smz-navy) 100%) !important;
+  color:#fff;
+}
+.cd-section.cd-dark h1,.cd-section.cd-dark h2,.cd-section.cd-dark h3{ color:#fff; }
+.cd-section.cd-dark p{ color:rgba(255,255,255,.8); }
+.cd-section.cd-dark a{ color:var(--smz-sun); }
+
+/* header (hero) section */
+.cd-header .cd-section{
+  padding:70px 0 90px; min-height:auto !important;
+}
+.cd-header h1{ font-size:clamp(46px,8vw,96px); }
+.cd-header h1 .tag{ display:block; color:var(--smz-sun); font-size:.55em; letter-spacing:.06em; }
+
+/* footer */
+.cd-footer .cd-section{
+  background:var(--smz-navy-deep) !important; color:rgba(255,255,255,.78);
+  padding:56px 0 28px; font-size:14.5px;
+}
+.cd-footer a{ color:rgba(255,255,255,.78) !important; text-decoration:none; }
+.cd-footer a:hover{ color:#fff !important; }
+.cd-footer h4{ color:#fff; font-family:Outfit,sans-serif !important; font-size:13px; letter-spacing:.12em; text-transform:uppercase; }
+
+/* ---- Buttons (ClubDesk buttons + our own .btn classes) ------------ */
+.cd-button, .cd-content .button, .btn, input[type=submit], button.cd-form-submit{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 22px; border-radius:12px; border:0;
+  font-family:Outfit,sans-serif; font-weight:800; font-size:16px;
+  background:var(--smz-sun); color:var(--smz-navy-deep) !important;
+  text-decoration:none !important; cursor:pointer;
+  transition:transform .15s ease;
+}
+.cd-button:hover, .btn:hover, input[type=submit]:hover{ transform:translateY(-2px); }
+.btn-blue{ background:var(--smz-blue); color:#fff !important; }
+.btn-ink{ background:var(--smz-navy-deep); color:#fff !important; }
+.btn-white{ background:#fff; color:var(--smz-navy) !important; }
+.btn-ghost{ background:transparent; color:#fff !important; border:2px solid rgba(255,255,255,.55); }
+.btn-link{ display:inline; padding:0 0 2px; background:none; border-radius:0; border-bottom:2px solid currentColor; color:var(--smz-blue) !important; font-weight:700; }
+
+/* ---- Cards (ClubDesk column blocks + our .card) ------------------- */
+.card, .cd-section.cd-light .cd-column-content{
+  background:var(--smz-surface); border:1px solid var(--smz-line);
+  border-radius:var(--smz-radius); padding:26px; box-shadow:var(--smz-shadow);
+}
+.cd-dark .card{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18); box-shadow:none; }
+.card img{ border-radius:12px; }
+
+/* stat tiles */
+.stat{ padding:22px 24px; border-radius:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); }
+.stat .n{ font-family:Anton,Impact,sans-serif; font-size:56px; line-height:1; color:var(--smz-sun); }
+.stat .l{ font-weight:600; color:rgba(255,255,255,.78); font-size:15px; margin-top:6px; }
+
+/* pills / chips */
+.pill{ display:inline-block; padding:4px 10px; border-radius:999px; background:var(--smz-surface-2); color:var(--smz-blue); font-weight:700; font-size:12.5px; letter-spacing:.04em; }
+.pill.sun{ background:var(--smz-sun); color:var(--smz-navy-deep); }
+
+/* ---- News list ----------------------------------------------------- */
+.cd-news-entry, .cd-news-list .cd-news-item{
+  background:var(--smz-surface); border:1px solid var(--smz-line);
+  border-radius:var(--smz-radius); padding:24px; box-shadow:var(--smz-shadow);
+}
+.cd-news-entry .cd-news-date, .cd-news-item .date{
+  font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--smz-ink-3);
+}
+.cd-news-entry h3{ font-size:22px; }
+
+/* ---- Tables (training times) -------------------------------------- */
+.cd-content table{ width:100%; border-collapse:collapse; font-size:15px; }
+.cd-content th{ text-align:left; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--smz-ink-3); padding:6px 0; border-bottom:1px solid var(--smz-line); }
+.cd-content td{ padding:9px 0; border-bottom:1px solid var(--smz-line); vertical-align:top; }
+.cd-content td:last-child{ font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; color:var(--smz-ink-2); }
+
+/* ---- Calendar ------------------------------------------------------ */
+.cd-calendar-entry, .cd-event{
+  display:grid; grid-template-columns:86px 1fr auto; gap:18px; align-items:center;
+  background:var(--smz-surface); border:1px solid var(--smz-line); border-radius:14px; padding:14px 18px; margin-bottom:10px;
+}
+.cd-calendar-entry .cd-date{ font-family:Anton,Impact,sans-serif; font-size:30px; color:var(--smz-blue); text-align:center; }
+
+/* ---- Forms --------------------------------------------------------- */
+.cd-form input, .cd-form select, .cd-form textarea, .cd-content input, .cd-content select, .cd-content textarea{
+  font:inherit; font-size:16px; padding:12px 14px; border:1px solid var(--smz-line); border-radius:10px; background:#fff; color:var(--smz-ink);
+}
+.cd-form label{ font-size:13px; font-weight:700; letter-spacing:.04em; color:var(--smz-ink-2); }
+
+/* ---- Sponsors ------------------------------------------------------ */
+.cd-sponsor, .logo-tile{
+  background:var(--smz-surface); border:1px solid var(--smz-line); border-radius:14px; padding:22px 18px; display:grid; place-items:center; min-height:96px;
+}
+.logo-tile.gold{ border:2px solid var(--smz-sun); }
+
+/* ---- Announcement bar (HTML block at very top of the header) ------- */
+.announce{ background:var(--smz-sun); color:var(--smz-navy-deep); font-weight:700; font-size:14px; text-align:center; padding:9px 16px; }
+
+/* ---- Wave divider under the hero (HTML block) ---------------------- */
+.waves{ display:block; width:100%; height:60px; margin-top:-1px; }
+
+/* ---- Language toggle (HTML block in the navigation) ---------------- */
+.lang{ display:inline-flex; border:1px solid rgba(255,255,255,.3); border-radius:999px; overflow:hidden; font-size:13px; font-weight:700; }
+.lang a{ padding:6px 11px; color:rgba(255,255,255,.78) !important; text-decoration:none; }
+.lang a.on{ background:var(--smz-sun); color:var(--smz-navy-deep) !important; }
+
+/* ---- Utilities ----------------------------------------------------- */
+.lead{ font-size:clamp(18px,2vw,21px); }
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.to-top, .cd-totop-button{ background:var(--smz-blue) !important; border-radius:50%; }
+
+@media (max-width:980px){ .grid-3,.grid-4{ grid-template-columns:1fr 1fr; } }
+@media (max-width:720px){
+  .cd-section{ padding:64px 0; }
+  .grid-2,.grid-3,.grid-4{ grid-template-columns:1fr; }
+  .cd-calendar-entry,.cd-event{ grid-template-columns:70px 1fr; }
+  .stat .n{ font-size:44px; }
+}
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; animation:none !important; } }
