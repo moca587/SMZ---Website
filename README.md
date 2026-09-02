@@ -2,7 +2,7 @@
 
 Redesign of the Wasserballklub Stadtmannschaft Zürich website (smzuerich.com), styled after foothillclubwaterpolo.org on SMZ's own blue.
 
-Live preview: https://moca587.github.io/smz-website/
+Live preview: https://moca587.github.io/SMZ---Website/
 
 ## Structure
 
