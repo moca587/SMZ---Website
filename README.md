@@ -41,5 +41,5 @@ Club colours only, blue and white: logo blue `#0071B8`, navy `#062A4D`, light bl
 - Forms show a thank-you message only; wire them to ClubDesk forms or a form service
 - Sponsor and partner logos live in `assets/img/sponsors/`, taken from smzuerich.com
 - Coach cards on `#/verein` still show "Name folgt" for U14, U16 and the women's team
-- The three action photos (`match-u14`, `action-ball`, `action-girls`) were cropped out of the Fruehlingscamp poster on smzuerich.com, so they are youth camp shots. `action-girls` is reused on the adults card on the home page as a generic match scene; swap it when a photo of the adult teams exists
+- Photos come from smzuerich.com. Most are that site's own full-resolution files; `u10-medals` was cropped out of a results graphic and `action-ball` out of the Fruehlingscamp poster, which has no standalone original
 - `#/wasserball`: U16 and U18 practice times are missing on the source pages ("Trainingszeiten folgen"); club fee amounts are not on the site; the U10 Friday session ends 18:15 on the Jugend page but 18:30 on the Trainings page (Jugend value used)
