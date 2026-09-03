@@ -12,8 +12,23 @@ Live preview: https://moca587.github.io/SMZ---Website/
     assets/img/         photos and logo
     assets/img/sponsors/  sponsor and partner logos
     clubdesk/           custom CSS + guide for applying the design inside ClubDesk
+    admin/              editor for news, calendar, photos, people, sponsors
+    supabase/schema.sql tables, row level security, image bucket
+    js/config.js        Supabase URL and anon key (empty until set up)
+    js/data.js          fetches content and replaces the built in markup
 
 No build step. Open index.html in a browser or push to main to deploy on GitHub Pages.
+
+## Backend
+
+News, calendar, photos, people and sponsors are editable at `/admin/` once the
+Supabase project is connected. See `SETUP.md`, about 15 minutes, once.
+
+Until then the site shows the content written into `index.html`, and it keeps
+showing it if the backend is ever unreachable. Nothing renders blank.
+
+ClubDesk stays responsible for members, fees, forms and the internal area. It has
+no API, so the two cannot sync automatically.
 
 ## Pages
 
@@ -37,7 +52,7 @@ Club colours only, blue and white: logo blue `#0071B8`, navy `#062A4D`, light bl
 
 ## Content to confirm
 
-- Calendar entries are examples
+- Calendar entries in `index.html` are examples, and are replaced once the events table has rows
 - Forms show a thank-you message only; wire them to ClubDesk forms or a form service
 - Sponsor and partner logos live in `assets/img/sponsors/`, taken from smzuerich.com
 - Coach cards on `#/verein` still show "Name folgt" for U14, U16 and the women's team
